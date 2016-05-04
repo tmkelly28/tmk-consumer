@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "get-updated": "npm install && git submodule update --remote"
+    "pull": "git pull origin master && npm install && git submodule update --init --recursive",
+    "update-submodule": "git submodule update --remote && git add . && git commit -m 'Updated submodule in the consumer: $1'"
+
   },
   "author": "",
   "license": "ISC",
